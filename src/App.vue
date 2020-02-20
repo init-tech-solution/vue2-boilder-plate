@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <h1>{{ msg }}</h1>
     <h2>to do:</h2>
     <ul>
@@ -16,7 +16,7 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to @duongital blog'
+      msg: 'welcome to @duongital blog'
     }
   }
 }
