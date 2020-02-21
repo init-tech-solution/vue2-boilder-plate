@@ -1,7 +1,24 @@
 module.exports = {
+  important: true,
   theme: {
-    extend: {},
+    fontFamily: {
+      display: ["Tahoma", "sans-serif"],
+      body: ["Times", "sans-serif"]
+    },
+    extend: {
+      colors: {
+        cyan: "#ff0000",
+        indigo: "#5c6ac4",
+        blue: "#007ace",
+        red: "#de3618"
+      },
+      margin: {
+        "96": "24rem",
+        "128": "32rem"
+      }
+    }
   },
-  variants: {},
-  plugins: [],
-}
+  variants: {
+    opacity: ["responsive", "hover"]
+  }
+};

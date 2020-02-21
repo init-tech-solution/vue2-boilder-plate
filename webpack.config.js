@@ -17,6 +17,10 @@ const config = {
       {
         test: /\.vue$/,
         loader: "vue-loader"
+      },
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'postcss-loader' ]
       }
     ]
   },

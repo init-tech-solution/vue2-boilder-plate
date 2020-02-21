@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>{{ msg }}</h1>
-    <h2>to do:</h2>
+    <h1 class="text-center">{{ msg }}</h1>
+    <h2 class="text-cyan">to do:</h2>
     <ul>
         <li>add tailwind css</li>
         <li>home with canvas background</li>

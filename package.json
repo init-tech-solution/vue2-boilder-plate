@@ -1,12 +1,11 @@
 {
-  "name": "webpack-test",
+  "name": "duongital-blog",
   "version": "1.0.0",
-  "description": "",
+  "description": "simple man who learn to code day by day",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "webpack-dev-server --config ./configs/webpack.config.dev.js",
-    "build": "webpack --config ./configs/webpack.config.production.js",
+    "build": "NODE_ENV=production webpack --config ./configs/webpack.config.production.js",
     "deploy": "yarn build && firebase deploy"
   },
   "keywords": [],
@@ -15,9 +14,14 @@
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
+    "@fullhuman/postcss-purgecss": "^2.0.6",
+    "autoprefixer": "^9.7.4",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^1.1.3",
+    "tailwindcss": "^1.2.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "vue-loader": "^15.9.0",
     "vue-template-compiler": "^2.6.11",
@@ -26,7 +30,6 @@
     "webpack-dev-server": "^3.10.1"
   },
   "dependencies": {
-    "tailwindcss": "^1.2.0",
     "vue": "^2.6.11"
   }
 }
