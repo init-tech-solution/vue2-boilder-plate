@@ -4,7 +4,7 @@ const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const webpack = require("webpack"); //to access built-in plugins
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
-module.exports = {
+const config = {
   mode: "development",
   entry: "./src/main.js",
   output: {
@@ -26,3 +26,5 @@ module.exports = {
     new HtmlWebpackPlugin({ template: "./index.html" })
   ]
 };
+
+module.exports = config;
