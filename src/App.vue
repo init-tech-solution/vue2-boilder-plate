@@ -1,23 +1,24 @@
 <template>
   <div>
     <h1 class="text-center">{{ msg }}</h1>
-    <h2 class="text-cyan">to do:</h2>
-    <ul>
-        <li>add tailwind css</li>
+    <div class="text-center">
+      <h2 class="text-cyan">to do:</h2>
+      <ul>
         <li>home with canvas background</li>
         <li>blogs: hook with firebase store</li>
         <li>cv</li>
-    </ul>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app',
-  data () {
+  name: "app",
+  data() {
     return {
-      msg: 'welcome to @duongital blog'
-    }
+      msg: "welcome to @duongital blog"
+    };
   }
-}
+};
 </script>
