@@ -2,7 +2,7 @@
   <div
     style="width: 100vw; height: 100vh; positioin: relative"
   >
-    <div style="position: absolute; width: 500px; height: 100px; top: 0; left: 0; right: 0; bottom: 0; margin: auto">
+    <div style="padding: 20px; position: absolute; max-width: 500px; height: 100px; top: 0; left: 0; right: 0; bottom: 0; margin: auto">
       <h1 class="text-center">{{ msg }}</h1>
       <p>không code nữa, Dương mệt rồi...</p>
       <div class="text-right">
@@ -36,6 +36,26 @@ export default {
 
       ctx.fillStyle = "coral";
       ctx.fillRect(20, 20, 150, 100);
+
+      var x = 30;
+      var d = 1;
+      window.requestAnimationFrame(function loop() {
+        console.log(x)
+        if (x == 333) {
+          d = -1;
+        } 
+
+        if (x == 0) {
+          d = 1;
+        }
+
+        x = x + d;
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+        ctx.fillStyle = "coral";
+        ctx.fillRect(x, 20, 100, 100);
+        window.requestAnimationFrame(loop)
+      })
   }
 
 };
