@@ -34,13 +34,12 @@ export default {
       const canvas = document.getElementById("canvas");
       const ctx = canvas.getContext("2d");
 
-      ctx.fillStyle = "coral";
-      ctx.fillRect(20, 20, 150, 100);
+      ctx.fillStyle = "lightblue";
+      ctx.fillRect(20, 20, 50, 50);
 
       var x = 30;
       var d = 1;
       window.requestAnimationFrame(function loop() {
-        console.log(x)
         if (x == 333) {
           d = -1;
         } 
@@ -52,8 +51,8 @@ export default {
         x = x + d;
 
         ctx.clearRect(0, 0, canvas.width, canvas.height)
-        ctx.fillStyle = "coral";
-        ctx.fillRect(x, 20, 100, 100);
+        ctx.fillStyle = "lightblue";
+        ctx.fillRect(x, 20, 50, 90);
         window.requestAnimationFrame(loop)
       })
   }

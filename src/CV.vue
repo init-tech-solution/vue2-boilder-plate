@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-top: 30%">
+  <div style="margin-top: 10%">
     <router-link to="/"> go home </router-link>
     <h1 class="text-center">{{ msg }}</h1>
     <div class="text-center">
