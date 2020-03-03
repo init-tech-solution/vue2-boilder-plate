@@ -1,6 +1,8 @@
 <template>
   <div style="margin-top: 10%">
-    <router-link to="/"> go home </router-link>
+    <router-link to="/">
+      <p>go home</p>
+    </router-link>
     <h1 class="text-center">{{ msg }}</h1>
     <div class="text-center">
       <h2 class="text-cyan">to do:</h2>
