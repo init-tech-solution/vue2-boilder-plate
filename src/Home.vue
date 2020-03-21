@@ -8,7 +8,6 @@
       <p class="mb-8">m: 0902.622.618</p>
       <hr/>
       <h1 class="text-center mt-8">{{ msg }}</h1>
-      <p>không code nữa, Dương mệt rồi...</p>
       <div class="text-right">
         <h2 class="text-cyan">to do:</h2>
         <ul>
