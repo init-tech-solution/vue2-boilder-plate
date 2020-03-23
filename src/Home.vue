@@ -3,10 +3,14 @@
     <div
       style="padding: 20px; position: absolute; max-width: 500px; height: 100px; top: 0; left: 0; right: 0; bottom: 0; margin: auto"
     >
-      <h1>NGUYỄN ĐẠI DƯƠNG</h1>
-      <p>Frontend Engineer</p>
-      <p class="mb-8">m: 0902.622.618</p>
-      <hr/>
+      <div class="round-group"></div>
+      <div class="round-group"></div>
+      <div class="round-group"></div>
+
+      <h1 class="group1">NGUYỄN ĐẠI DƯƠNG</h1>
+      <p class="group1">Frontend Engineer</p>
+      <p class="mb-8 group1">m: 0902.622.618</p>
+      <hr />
       <h1 class="text-center mt-8">{{ msg }}</h1>
       <div class="text-right">
         <h2 class="text-cyan">to do:</h2>
@@ -26,6 +30,8 @@
 </template>
 
 <script>
+import anime from "animejs";
+
 export default {
   name: "p-home",
   data() {
@@ -34,6 +40,34 @@ export default {
     };
   },
   mounted() {
+    // group texts
+    anime({
+      targets: ".group1",
+      translateX: 270,
+      direction: "alternate",
+      loop: 2,
+      delay: function(el, i, l) {
+        return i * 100;
+      },
+      endDelay: function(el, i, l) {
+        return (l - i) * 100;
+      }
+    });
+
+    anime({
+      targets: ".animate-svg path",
+      strokeDashoffset: [anime.setDashoffset, 0],
+      easing: "easeInOutSine",
+      duration: 1500,
+      delay: function(el, i) {
+        return i * 250;
+      },
+      direction: "alternate",
+      loop: true
+    });
+
+    this.randomValues();
+
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
 
@@ -71,7 +105,29 @@ export default {
       min = Math.ceil(min);
       max = Math.floor(max);
       return Math.floor(Math.random() * (max - min + 1)) + min;
+    },
+    randomValues: function() {
+      anime({
+        targets: ".round-group",
+        translateX: function() {
+          return anime.random(0, 270);
+        },
+        easing: "easeInOutQuad",
+        duration: 750,
+        complete: this.randomValues
+      });
     }
   }
 };
 </script>
+
+<style scoped>
+.round-group {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  opacity: 0.4;
+}
+</style>
