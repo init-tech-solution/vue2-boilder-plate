@@ -1,8 +1,9 @@
-@import "tailwindcss/base";
+/* purgecss start ignore */
+@tailwind  base;
+@tailwind  components;
+/* purgecss end ignore */
 
-@import "tailwindcss/components";
-
-@import "tailwindcss/utilities";
+@tailwind  utilities;
 
 h1, h2, h3, h4, h5, h6, p, ul, li {
     font-family: 'Roboto Slab', serif;

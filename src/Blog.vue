@@ -20,6 +20,9 @@ export default {
     return {
       msg: "BLOG"
     };
+  },
+  mounted() {
+    window['ga-disable-UA-161408823-1'] = true;
   }
 };
 </script>
