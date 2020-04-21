@@ -1,19 +1,17 @@
 <template>
-  <div style="width: 100vw; height: 100vh; positioin: relative">
+  <div
+    style="width: 100vw; height: 100vh; position: relative; overflow: hidden"
+  >
     <div
-      style="padding: 20px; position: absolute; max-width: 500px; height: 100px; top: 0; left: 0; right: 0; bottom: 0; margin: auto"
+      style="padding: 20px; position: absolute; max-width: 500px; height: 100px; top: 0; left: 0; right: 0; bottom: 0; margin: auto;"
     >
-      <div class="round-group"></div>
-      <div class="round-group"></div>
-      <div class="round-group"></div>
-
-      <h1 class="group1">NGUYỄN ĐẠI DƯƠNG</h1>
+      <div class="pattern-horizontal-lines-sm gray-lighter" style="width: 200px; height: 200px; position: absolute; left: 100px; top: -150px; opacity: 20%"></div>
+      <h1 class="group1">DUONG NGUYEN</h1>
       <p class="group1">Frontend Engineer</p>
       <p class="mb-8 group1">m: 0902.622.618</p>
-      <hr />
-      <h1 class="text-center mt-8">{{ msg }}</h1>
-      <div class="text-right">
-        <h2 class="text-cyan">to do:</h2>
+      <div class="pattern-dots-sm slategray h-5"></div>
+      <h1 class="text-right mt-8">{{ msg }}</h1>
+      <div class="text-right" style="font-size: 8px">
         <ul>
           <li>home with canvas background</li>
           <router-link to="/blog">
@@ -36,46 +34,46 @@ export default {
   name: "p-home",
   data() {
     return {
-      msg: "welcome to @duongital blog"
+      msg: "welcome to @duongital blog",
     };
   },
   mounted() {
     // group texts
-    anime({
-      targets: ".group1",
-      translateX: 270,
-      direction: "alternate",
-      loop: 2,
-      delay: function(el, i, l) {
-        return i * 100;
-      },
-      endDelay: function(el, i, l) {
-        return (l - i) * 100;
-      }
-    });
+    // anime({
+    //   targets: ".group1",
+    //   translateX: 270,
+    //   direction: "alternate",
+    //   loop: 2,
+    //   delay: function(el, i, l) {
+    //     return i * 100;
+    //   },
+    //   endDelay: function(el, i, l) {
+    //     return (l - i) * 100;
+    //   }
+    // });
 
-    anime({
-      targets: ".animate-svg path",
-      strokeDashoffset: [anime.setDashoffset, 0],
-      easing: "easeInOutSine",
-      duration: 1500,
-      delay: function(el, i) {
-        return i * 250;
-      },
-      direction: "alternate",
-      loop: true
-    });
+    // anime({
+    //   targets: ".animate-svg path",
+    //   strokeDashoffset: [anime.setDashoffset, 0],
+    //   easing: "easeInOutSine",
+    //   duration: 1500,
+    //   delay: function(el, i) {
+    //     return i * 250;
+    //   },
+    //   direction: "alternate",
+    //   loop: true
+    // });
 
-    this.randomValues();
+    // this.randomValues();
 
-    const canvas = document.getElementById("canvas");
-    const ctx = canvas.getContext("2d");
+    // const canvas = document.getElementById("canvas");
+    // const ctx = canvas.getContext("2d");
 
-    let height = canvas.height * 0.7;
-    let width = 50 + this.getRandomNumber(50, 100);
+    // let height = canvas.height * 0.4;
+    // let width = 50 + this.getRandomNumber(0, 100);
 
-    ctx.fillStyle = this.getRandomColor();
-    ctx.fillRect(width, 20, 50, height);
+    // ctx.fillStyle = this.getRandomColor();
+    // ctx.fillRect(width, 20, 100, height);
 
     // var x = 30;
     // var d = 1;
@@ -114,10 +112,10 @@ export default {
         },
         easing: "easeInOutQuad",
         duration: 750,
-        complete: this.randomValues
+        complete: this.randomValues,
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
