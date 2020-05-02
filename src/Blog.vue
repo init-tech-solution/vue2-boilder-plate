@@ -7,7 +7,7 @@
     <div class="text-center">
       <h2 class="text-cyan">to do:</h2>
       <ul>
-        <li>blogs: hook with firebase store</li>
+        <li>blogs: hook with firebase</li>
       </ul>
     </div>
   </div>
