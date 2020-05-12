@@ -7,22 +7,37 @@
     <div class="text-center">
       <h2 class="text-cyan">to do:</h2>
       <ul>
-        <li>blogs: hook with firebase</li>
+        <li>getting data from firebase cloudfunctions</li>
+        <li>{{ data }}</li>
       </ul>
     </div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "p-blog",
   data() {
     return {
-      msg: "BLOG"
+      msg: "BLOG",
+      data: "",
     };
   },
+  created() {
+    this.data = "waiting...";
+    axios
+      .get(
+        "https://us-central1-duongital-test.cloudfunctions.net/appgoogledocs"
+      )
+      .then((res) => {
+        console.log(res);
+        this.data = res.data;
+      });
+  },
   mounted() {
-    window['ga-disable-UA-161408823-1'] = true;
-  }
+    window["ga-disable-UA-161408823-1"] = true;
+  },
 };
 </script>
