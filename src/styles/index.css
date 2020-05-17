@@ -27,6 +27,6 @@ p {
 }
 
 a {
-  @apply block text-green-400 uppercase;
+  @apply block text-green-400 uppercase underline;
   font-size: 12px;
 }

@@ -1,13 +1,13 @@
 <template>
-  <div style="margin-top: 10%">
+  <div class="container mx-auto mt-12 p-4">
     <router-link to="/">
-      <a class="text-center">go home</a>
+      <a class="text-left">go home</a>
     </router-link>
-    <div class="h-12"></div>
-    <h1 class="text-center">A little bit about myself</h1>
+    <div class="h-4"></div>
+    <h1 class="text-left">A little bit about myself</h1>
     <div class="h-4"></div>
     <div class="pattern-dots-sm slategray h-5"></div>
-    <div class="text-center mt-12">
+    <div class="text-left mt-8 sm:w-full md:w-1/2">
       <div v-if="loading">
         <p>serverless running...</p>
       </div>
