@@ -6,7 +6,9 @@
   "scripts": {
     "serve": "webpack-dev-server --config ./configs/webpack.config.dev.js",
     "build": "NODE_ENV=production webpack --config ./configs/webpack.config.production.js",
-    "deploy": "yarn build && firebase deploy"
+    "build:windows": "SET NODE_ENV=production && webpack --config ./configs/webpack.config.production.js",
+    "deploy": "yarn build && firebase deploy",
+    "deploy:windows": "yarn build:windows && firebase deploy"
   },
   "keywords": [],
   "author": "",
