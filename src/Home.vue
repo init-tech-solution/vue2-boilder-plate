@@ -14,11 +14,11 @@
       <div class="text-right" style="font-size: 8px">
         <ul>
           <li>home with canvas background</li>
-          <router-link to="/blog">
-            <li class="underline">blogs: hook with firebase store</li>
-          </router-link>
-          <router-link to="/cv">
-            <li class="underline">cv</li>
+          <!-- <router-link to="/blog">
+            <li class="underline mt-4">blogs: hook with firebase store</li>
+          </router-link> -->
+          <router-link to="/about">
+            <li class="underline mt-4">introduce myself</li>
           </router-link>
         </ul>
       </div>

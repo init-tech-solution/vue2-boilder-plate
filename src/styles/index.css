@@ -17,3 +17,16 @@ li {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
 }
+
+h1 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 10px;
+}
+
+a {
+  @apply block text-green-400 uppercase;
+  font-size: 12px;
+}

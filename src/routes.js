@@ -3,7 +3,7 @@ import Router from "vue-router";
 
 import Home from "./Home.vue";
 import Blog from "./Blog.vue";
-import CV from "./CV.vue";
+import About from "./About.vue";
 import Mercedes from "./Mercedes.vue";
 
 Vue.use(Router);
@@ -22,9 +22,9 @@ const routes = new Router({
       component: Blog
     },
     {
-      path: "/cv",
-      name: "p-cv",
-      component: CV
+      path: "/about",
+      name: "p-about",
+      component: About
     },
     {
       path: "/mercedes",
