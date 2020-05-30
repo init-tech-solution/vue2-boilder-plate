@@ -1,19 +1,21 @@
-const config = require('../webpack.config.js')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const config = require("../webpack.config.js");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
-config.mode = 'production'
+process.env.NODE_ENV = "production";
+
+config.mode = "production";
 
 config.optimization = {
   splitChunks: {
-    chunks: 'all'
-  }
-}
+    chunks: "all",
+  },
+};
 
 config.plugins = config.plugins.concat([
   new UglifyJsPlugin({
     sourceMap: true,
-    extractComments: true
-  })
-])
+    extractComments: true,
+  }),
+]);
 
-module.exports = config
+module.exports = config;
