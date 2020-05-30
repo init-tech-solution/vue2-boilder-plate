@@ -20,12 +20,16 @@ const config = {
         test: /\.css$/,
         use: ["style-loader", "postcss-loader"],
       },
+      {
+        test: /\.mp3$/,
+        use: ["file-loader"],
+      },
     ],
   },
   plugins: [
     new CleanWebpackPlugin(),
     new VueLoaderPlugin(),
-    new HtmlWebpackPlugin({ template: "./index.html" }),
+    new HtmlWebpackPlugin({ template: "./public/index.html" }),
   ],
 };
 

@@ -1,29 +1,24 @@
 <template>
   <div>
-    <h1>sound mixer</h1>
+    <h1 class="text-right m-20">sound mixer</h1>
+    <c-sound />
   </div>
 </template>
 
 <script>
 import anime from "animejs";
+import Sound from "../components/Sound.vue";
 
 export default {
   name: "p-home",
+  components: { [Sound.name]: Sound },
   data() {
     return {
-      msg: "welcome to @duongital blog",
+      msg: "abc",
     };
   },
 };
 </script>
 
 <style scoped>
-.round-group {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: white;
-  position: absolute;
-  opacity: 0.4;
-}
 </style>
