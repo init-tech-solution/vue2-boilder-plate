@@ -1,10 +1,10 @@
 import Vue from "vue";
 import Router from "vue-router";
 
-import Home from "./Home.vue";
-import Blog from "./Blog.vue";
-import About from "./About.vue";
-import Mercedes from "./Mercedes.vue";
+import Home from "./pages/Home.vue";
+import Blog from "./pages/Blog.vue";
+import About from "./pages/About.vue";
+import Mercedes from "./pages/Mercedes.vue";
 
 Vue.use(Router);
 
