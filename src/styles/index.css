@@ -5,6 +5,10 @@
 
 @tailwind utilities;
 
+html {
+  font-size: 16px;
+}
+
 h1,
 h2,
 h3,
@@ -19,11 +23,11 @@ li {
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 p {
-  font-size: 10px;
+  font-size: 1rem;
 }
 
 a {
